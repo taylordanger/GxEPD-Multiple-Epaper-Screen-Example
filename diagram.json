@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Marcel Gauch",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -52.76, "attrs": {} },
+    { "type": "board-epaper-2in9", "id": "epd1", "top": -47.4, "left": 128.88, "attrs": {} },
+    { "type": "board-epaper-2in9", "id": "epd2", "top": 106.2, "left": 128.88, "attrs": {} },
+    { "type": "wokwi-microsd-card", "id": "sd1", "top": -220.57, "left": -211.13, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "epd1:GND", "esp:GND.3", "black", [ "h-86.4", "v57.53" ] ],
+    [ "epd1:VCC", "esp:3V3", "red", [ "h-19.2", "v-67.27", "h-172.95" ] ],
+    [ "epd1:BUSY", "esp:4", "green", [ "h-76.8", "v153.6" ] ],
+    [ "epd1:DC", "esp:22", "green", [ "h-67.2", "v38.4" ] ],
+    [ "epd1:RST", "esp:21", "green", [ "h-67.2", "v76.8" ] ],
+    [ "epd2:GND", "esp:GND.2", "black", [ "h-48", "v-182.47" ] ],
+    [ "epd2:VCC", "esp:3V3", "red", [ "h-76.8", "v28.73", "h-134.4", "v-201.6" ] ],
+    [ "epd1:CS", "esp:5", "green", [ "h-38.4", "v96" ] ],
+    [ "epd2:BUSY", "esp:16", "green", [ "h-67.2", "v-9.6" ] ],
+    [ "epd2:RST", "esp:0", "green", [ "h0" ] ],
+    [ "epd2:DC", "esp:2", "green", [ "h0" ] ],
+    [ "epd2:CS", "esp:15", "green", [ "h0" ] ],
+    [ "epd1:CLK", "esp:18", "green", [ "h-67.2", "v76.73" ] ],
+    [ "epd2:CLK", "esp:18", "green", [ "h-57.6", "v-76.87" ] ],
+    [ "epd1:DIN", "esp:23", "green", [ "h0" ] ],
+    [ "epd2:DIN", "esp:23", "green", [ "h-28.8", "v-153.67" ] ]
+  ],
+  "dependencies": {}
+}
