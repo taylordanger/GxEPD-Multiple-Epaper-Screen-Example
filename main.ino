@@ -1,17 +1,17 @@
 #include <GxEPD.h>
-#include <GxGDEM029T94/GxGDEM029T94.h>   
+#include <GxGDEM029T94/GxGDEM029T94.h>   // THIS IS IMPORTANT 
 #include <GxIO/GxIO_SPI/GxIO_SPI.h>
 #include <GxIO/GxIO.h>  
 #include <SPI.h>
 #include <Fonts/FreeMonoBold9pt7b.h>
 #include <Fonts/FreeMonoBold12pt7b.h>
-#include <SD.h>
-
-#define CS1   5   
+#include <SD.h> 
+//pinouts for screen 1
+#define CS1   5 
 #define DC1   22  
 #define RSET1 21  
 #define BUSY1 4  
-
+// pinouts for screen 2
 #define CS2   15  
 #define DC2   2   
 #define RSET2 0  
